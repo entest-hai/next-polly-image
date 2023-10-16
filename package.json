@@ -1,0 +1,38 @@
+{
+  "name": "next-image-gallery",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.427.0",
+    "@aws-sdk/client-polly": "^3.427.0",
+    "@aws-sdk/client-s3": "^3.427.0",
+    "@aws-sdk/credential-providers": "^3.427.0",
+    "@aws-sdk/s3-request-presigner": "^3.427.0",
+    "aws-amplify": "^5.3.11",
+    "aws-cloudfront-sign": "^3.0.2",
+    "aws-jwt-verify": "^4.0.0",
+    "axios": "^1.5.1",
+    "next": "13.5.4",
+    "next-auth": "^4.23.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "typescript": "^5"
+  }
+}

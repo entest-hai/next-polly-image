@@ -1,0 +1,25 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - echo "PUBLIC_KEY_ID=$PUBLIC_KEY_ID" >> .env
+        - echo "PRIVATE_KEY=$PRIVATE_KEY" >> .env
+        - echo "NEXTAUTH_URL=$NEXTAUTH_URL" >> .env
+        - echo "JWT_SECRET=$JWT_SECRET" >> .env
+        - echo "COGNITO_ISSUER=$COGNITO_ISSUER" >> .env
+        - echo "COGNITO_CLIENT_SECRET=$COGNITO_CLIENT_SECRET" >> .env
+        - echo "COGNITO_CLIENT_ID=$COGNITO_CLIENT_ID" >> .env
+        - echo "COGNITO_USER_NAME=$COGNITO_USER_NAME" >> .env
+        - echo "COGNITO_POOL_ID=$COGNITO_POOL_ID" >> .env
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
