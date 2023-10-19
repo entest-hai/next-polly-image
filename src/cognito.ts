@@ -27,6 +27,20 @@ export const signUp = async (username: string, password: string) => {
   }
 };
 
+export const confirmSignUp = async (username: string, code: string) => {
+  try {
+    const response = await cognitoClient.send(
+      new ConfirmSignUpCommand({
+        ClientId: config.CLIENT_ID,
+        Username: username,
+        ConfirmationCode: code,
+      })
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const confirm = async (username: string, code: string) => {
   try {
     const response = await cognitoClient.send(
