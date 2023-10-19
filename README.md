@@ -3,7 +3,7 @@ title: build an image gallery app
 description: build an image gallery app
 author: haimtran
 publishedDate: 06/12/2023
-date: 2023-06-13
+date: 2023-06-14
 ---
 
 ## Cognito UserPool
