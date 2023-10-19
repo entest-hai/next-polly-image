@@ -3,14 +3,14 @@ import os
 
 # parameters
 REGION = "us-east-1"
-REPO_NAME = "image-gallery-ecr"
+REPO_NAME = "polly-image-app"
 ACCOUNT = os.environ["ACCOUNT"]
 
 # delete all docker images
-# os.system("sudo docker system prune -a")
+os.system("sudo docker system prune -a")
 
 # # build image
-# os.system(f"sudo docker build -t {REPO_NAME} . ")
+os.system(f"sudo docker build -t {REPO_NAME} . ")
 
 #  aws ecr login
 os.system(f"aws ecr get-login-password --region {REGION} | sudo docker login --username AWS --password-stdin {ACCOUNT}.dkr.ecr.{REGION}.amazonaws.com")
